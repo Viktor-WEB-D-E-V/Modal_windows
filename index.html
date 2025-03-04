@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal</title>
+    <link rel="stylesheet" href="common.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button class="open">Open Modal</button>
+    <div class="modal active">
+      <div class="dialog">
+        <div class="content">
+          <form action="#">
+            <div class="close">&times;</div>
+            <div class="title">We will contact you as soon as possible!</div>
+            <input
+              placeholder="Your Name"
+              name="name"
+              type="text"
+              class="input"
+            />
+            <input
+              placeholder="Your phone number"
+              name="phone"
+              type="phone"
+              class="input"
+            />
+            <button class="btn btn_dark btn_min">Call me back</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="script.js" defer></script>
+  </body>
+</html>
