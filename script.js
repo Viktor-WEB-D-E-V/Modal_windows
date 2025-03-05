@@ -6,8 +6,17 @@ function toggleModal() {
   modalWind.classList.toggle("active");
   if (modalWind.classList.contains("active")) {
     document.body.style.overflow = "hidden";
+    document.addEventListener("keydown", escCloseModal);
+  } else {
+    document.body.style.overflow = "";
+    document.removeEventListener("keydown", escCloseModal);
   }
-  document.body.style.overflow = "";
+}
+
+function escCloseModal(e) {
+  if (e.code === "Escape") {
+    toggleModal();
+  }
 }
 
 modalBtn.forEach((e) => {
